@@ -178,6 +178,8 @@ def login(user, password):
 def main(_user, _passwd, min_1, max_1):
     user = str(_user)
     password = str(_passwd)
+    min_1 = 6100 #我添加
+    max_1 = 12000 #我添加
     step = str(random.randint(min_1, max_1))
     print("已设置为随机步数(" + str(min_1) + "~" + str(max_1) + ")")
     if user == '' or password == '':
@@ -219,7 +221,7 @@ def main(_user, _passwd, min_1, max_1):
 def get_time():
     url = 'https://api.m.jd.com/client.action?functionId=queryMaterialAdverts&client=wh5'
     response = requests.get(url, headers=headers).json()
-    t = response['currentTime2']
+    t = response['currentTimeVal']
     return t
 
 
