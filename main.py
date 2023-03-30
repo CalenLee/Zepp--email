@@ -227,7 +227,7 @@ def get_time():
     #淘宝时间
     url = 'http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp'
     response = requests.get(url, headers=headers).json()
-    t = response['t']
+    t = response['data']['t']
     
     return t
 
