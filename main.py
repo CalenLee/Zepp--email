@@ -219,9 +219,16 @@ def main(_user, _passwd, min_1, max_1):
 
 # 获取时间戳
 def get_time():
-    url = 'https://api.m.jd.com/client.action?functionId=queryMaterialAdverts&client=wh5'
+    #京东时间 弃用
+    #url = 'https://api.m.jd.com/client.action?functionId=queryMaterialAdverts&client=wh5'
+    #response = requests.get(url, headers=headers).json()
+    #t = response['currentTimeVal']
+    
+    #淘宝时间
+    url = 'http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp'
     response = requests.get(url, headers=headers).json()
-    t = response['currentTimeVal']
+    t = response['t']
+    
     return t
 
 
