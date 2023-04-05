@@ -7,7 +7,7 @@ on:
   #  branches: [ main ]
   workflow_dispatch:
   schedule:
-    - cron: '9 7 * * *' # 修改你的定时配置 #这里是UTC时间每天7点24分执行一次，换算为北京时间为15点24分执行
+    - cron: '19 7 * * *' # 修改你的定时配置 #这里是UTC时间每天7点24分执行一次，换算为北京时间为15点24分执行
   watch:
     types: started
 
